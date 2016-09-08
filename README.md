@@ -11,5 +11,5 @@ pip install -r requirements.txt
 
 ```
 cd thuspider
-scrapy crawl thuspider -o sqlite.db -t sqlite
+scrapy crawl thuspider -o ../data.db -t sqlite
 ```
