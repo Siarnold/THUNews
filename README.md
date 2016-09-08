@@ -7,9 +7,18 @@ Spider for crawling http://news.tsinghua.edu.cn/
 pip install -r requirements.txt
 ```
 
-## Run spider
+## Crawl data
+
+### Run spider
 
 ```
 cd thuspider
 scrapy crawl thuspider -o ../data.db -t sqlite
+```
+
+
+### Generate inverted list
+
+```
+python inverted.py
 ```
