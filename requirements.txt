@@ -1,3 +1,4 @@
 Scrapy
 html2text
 jieba
+django
