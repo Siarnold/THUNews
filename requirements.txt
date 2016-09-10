@@ -2,3 +2,5 @@ Scrapy
 html2text
 jieba
 django
+djangorestframework
+python-dateutil

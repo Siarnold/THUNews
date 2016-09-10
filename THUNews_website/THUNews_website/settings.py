@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'thunews.apps.ThunewsConfig',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'django.contrib.auth',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -98,3 +100,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10
+}
