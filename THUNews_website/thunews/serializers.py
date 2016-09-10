@@ -4,14 +4,14 @@ from thunews.models import Thuspideritem
 
 class ItemSerializer(serializers.Serializer):
     title = serializers.SerializerMethodField()
-    extract = serializers.SerializerMethodField()
+    abstract = serializers.SerializerMethodField()
     date = serializers.SerializerMethodField()
     url = serializers.CharField()
 
     def get_title(self, item):
         return self.get_content_weight(item.title)[0]
 
-    def get_extract(self, item):
+    def get_abstract(self, item):
         paragraphs = filter(lambda x: x, item.content.split('\n'))
         content_weight = map(self.get_content_weight, paragraphs)
         # return paragraph with the highest weight
