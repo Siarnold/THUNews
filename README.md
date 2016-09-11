@@ -22,3 +22,11 @@ scrapy crawl thuspider -o ../data.db -t sqlite
 ```
 python inverted.py
 ```
+
+
+### Run server
+
+```
+cd THUNews_website
+python manage.py runserver
+```
