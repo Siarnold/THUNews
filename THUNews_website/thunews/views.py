@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from thunews.serializers import ItemSerializer
 from thunews.models import Thuspideritem, Inverted
 from rest_framework.decorators import api_view
@@ -9,11 +10,11 @@ import jieba
 
 
 def index(request):
-    return HttpResponse("Hello!")
+    return render(request, 'thunews/index.html', {})
 
 
 def query(request):
-    return HttpResponse("query")
+    return render(request, 'thunews/query.html', {})
 
 
 class ApiQuery(generics.ListAPIView):
